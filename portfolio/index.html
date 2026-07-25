@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nama Anda — Software Developer</title>
+<meta name="description" content="Portofolio pribadi Nama Anda, mahasiswa Teknologi Rekayasa Perangkat Lunak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== TAB BAR NAV (dibuat seperti tab editor kode) ===== -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar__brand">
+    <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+  </div>
+  <nav class="tabbar__tabs">
+    <a href="#beranda" class="tab is-active" data-tab="beranda">beranda<span class="tab__ext">.html</span></a>
+    <a href="#profil" class="tab" data-tab="profil">profil<span class="tab__ext">.md</span></a>
+    <a href="#proyek" class="tab" data-tab="proyek">proyek<span class="tab__ext">.js</span></a>
+    <a href="#kontak" class="tab" data-tab="kontak">kontak<span class="tab__ext">.txt</span></a>
+  </nav>
+  <button class="tabbar__menu" id="menuToggle" aria-label="Buka menu">☰</button>
+</header>
+
+<main>
+
+  <!-- ===== BERANDA / HERO ===== -->
+  <section id="beranda" class="hero">
+    <div class="hero__left">
+      <p class="eyebrow">// mahasiswa d4 rekayasa perangkat lunak</p>
+      <h1 class="hero__title">Halo, saya<br><span class="hero__name">Nama Anda.</span></h1>
+      <p class="hero__role">Saya membangun antarmuka web yang rapi &amp; fungsional.</p>
+      <div class="hero__actions">
+        <a href="#proyek" class="btn btn--primary">Lihat Proyek</a>
+        <a href="#kontak" class="btn btn--ghost">Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="hero__right">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="terminal__title">whoami.sh</span>
+        </div>
+        <div class="terminal__body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="terminal__out" id="typeOut"></p>
+          <p class="terminal__cursor" id="cursor">▌</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROFIL ===== -->
+  <section id="profil" class="section">
+    <p class="eyebrow">01 · profil.md</p>
+    <div class="profil__grid">
+      <div class="profil__photo">
+        <div class="photo-frame">
+          <img src="assets/foto-profil.jpg" alt="Foto profil Nama Anda" onerror="this.style.display='none'; this.parentElement.classList.add('photo-frame--empty')">
+        </div>
+      </div>
+      <div class="profil__text">
+        <h2>Tentang Saya</h2>
+        <p>Saya mahasiswa Program Studi Sarjana Terapan Teknologi Rekayasa Perangkat Lunak di Politeknik Negeri Bali, semester 4. Tertarik pada pengembangan web front-end, desain antarmuka, dan cloud computing.</p>
+        <p>Di luar kuliah, saya senang mengerjakan proyek kecil untuk melatih kemampuan coding dan mendokumentasikannya di GitHub.</p>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">PHP</span>
+          <span class="skill">Git &amp; GitHub</span>
+          <span class="skill">Cloud Computing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INFORMASI UTAMA / PROYEK ===== -->
+  <section id="proyek" class="section">
+    <p class="eyebrow">02 · proyek.js</p>
+    <h2>Informasi Utama &amp; Proyek</h2>
+    <p class="section__intro">Beberapa proyek dan pengalaman yang pernah saya kerjakan.</p>
+
+    <div class="filetree">
+      <article class="filecard">
+        <div class="filecard__head">
+          <span class="filecard__icon">📁</span>
+          <span class="filecard__name">uas-cloud-computing/</span>
+          <span class="filecard__tag">2026</span>
+        </div>
+        <p class="filecard__desc">Landing page portofolio ini — dibangun dengan HTML, CSS, dan JavaScript murni, di-deploy melalui GitHub Pages untuk memenuhi Ujian Akhir Semester mata kuliah Cloud Computing.</p>
+        <div class="filecard__stack"><span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Pages</span></div>
+      </article>
+
+      <article class="filecard">
+        <div class="filecard__head">
+          <span class="filecard__icon">📁</span>
+          <span class="filecard__name">virtual_tour_jagatnatha/</span>
+          <span class="filecard__tag">2026</span>
+        </div>
+        <p class="filecard__desc">sistem informasi pariwisata dengan integrasi virtual tour pada pura jagatnatha - dibangun dengan html,css, js, tailwind, dan laravel, masih dalam bentuk local computer untuk kebutuhan project base learning </p>
+        <div class="filecard__stack"><span>html</span><span>css</span><span>js</span><span>tailwind</span><span>laravel</span></div>
+      </article>
+
+      <article class="filecard">
+        <div class="filecard__head">
+          <span class="filecard__icon">📁</span>
+          <span class="filecard__name">virtual_tour_bukit_trunyan/</span>
+          <span class="filecard__tag">Ganti</span>
+        </div>
+        <p class="filecard__desc">sistem informasi pariwisata dengan integrasi virtual tour pada bukit trunyan - dibangun dengan html,css, js, tailwind, dan laravel, masih dalam bentuk local computer untuk kebutuhan project base learning</p>
+        <div class="filecard__stack"><span>html</span><span>css</span><span>js</span><span>tailwind</span><span>laravel</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== KONTAK ===== -->
+  <section id="kontak" class="section section--kontak">
+    <p class="eyebrow">03 · kontak.txt</p>
+    <h2>Hubungi Saya</h2>
+    <p class="section__intro">Terbuka untuk diskusi proyek, kolaborasi, atau sekadar menyapa.</p>
+
+    <div class="kontak__grid">
+      <form class="kontak__form" id="contactForm">
+        <label>
+          <span>Nama</span>
+          <input type="text" name="name" placeholder="Nama Anda" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="email@contoh.com" required>
+        </label>
+        <label>
+          <span>Pesan</span>
+          <textarea name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Kirim Pesan</button>
+        <p class="kontak__status" id="formStatus"></p>
+      </form>
+
+      <ul class="kontak__list">
+        <li><span class="kontak__label">Email</span><a href="mailto:nama@email.com">sandhymahardika73@gmail.com</a></li>
+        <li><span class="kontak__label">GitHub</span><a href="https://github.com/username" target="_blank" rel="noopener">github.com/sandhymahardika73-cyber</a></li>
+        <li><span class="kontak__label">LinkedIn</span><a href="https://linkedin.com/in/username" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
+        <li><span class="kontak__label">Lokasi</span><span>ubud, gianyar, Bali, Indonesia</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> I Wayan Sandhy Mahardika. Dibangun dengan HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<!-- ===== STATUS BAR (signature element ala VS Code) ===== -->
+<div class="statusbar" id="statusbar">
+  <span class="statusbar__branch">⎇ main</span>
+  <span class="statusbar__section" id="statusSection">beranda.html</span>
+  <span class="statusbar__spacer"></span>
+  <span>UTF-8</span>
+  <span>LF</span>
+  <span id="statusTime"></span>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

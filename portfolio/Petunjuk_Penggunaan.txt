@@ -1,0 +1,54 @@
+PETUNJUK PENGGUNAAN WEBSITE
+============================
+Nama Website : Portofolio Pribadi - Nama Anda
+Jenis        : Website statis (HTML, CSS, JavaScript)
+Deployment   : GitHub Pages
+
+1. STRUKTUR FILE
+   index.html          -> halaman utama (Beranda, Profil, Proyek, Kontak)
+   css/style.css        -> seluruh styling tampilan
+   js/script.js          -> interaktivitas (efek ketik, tab aktif, jam, form)
+   assets/foto-profil.jpg -> foto profil (ganti dengan foto Anda)
+
+2. CARA MENJALANKAN SECARA LOKAL
+   a. Ekstrak folder project.
+   b. Buka file index.html langsung di browser (double click), ATAU
+   c. Gunakan Live Server (VS Code extension) untuk preview dengan reload otomatis.
+
+3. CARA DEPLOY KE GITHUB PAGES
+   a. Buat repository baru di GitHub, misal: portofolio-nama-anda
+   b. Upload seluruh isi folder ini ke repository tersebut (via GitHub Desktop
+      atau perintah git berikut):
+        git init
+        git add .
+        git commit -m "Initial commit - portofolio"
+        git branch -M main
+        git remote add origin https://github.com/USERNAME/REPO.git
+        git push -u origin main
+   c. Buka repository di GitHub -> Settings -> Pages
+   d. Pada "Source", pilih branch "main" dan folder "/root", lalu Save
+   e. Tunggu 1-2 menit, URL publik akan muncul di halaman yang sama,
+      formatnya: https://USERNAME.github.io/REPO/
+
+4. CARA MELAKUKAN PEMBARUAN (UPDATE) SETELAH DEPLOY
+   a. Edit file (misal ubah teks di index.html atau warna di style.css)
+   b. Jalankan:
+        git add .
+        git commit -m "Update: <deskripsi perubahan>"
+        git push
+   c. GitHub Pages otomatis melakukan build ulang dalam 1-2 menit.
+   d. Refresh URL publik untuk melihat perubahan (gunakan Ctrl+F5 jika
+      browser masih menampilkan versi cache lama).
+
+5. BAGIAN YANG PERLU DIGANTI SEBELUM PENGUMPULAN
+   - index.html   : nama, deskripsi diri, daftar proyek, email, link GitHub/LinkedIn
+   - assets/       : ganti foto-profil.jpg dengan foto asli
+   - js/script.js  : ganti teks efek ketik (variabel textToType)
+   - (opsional) hubungkan form kontak ke layanan gratis seperti
+     Web3Forms (web3forms.com) atau Formspree (formspree.io) agar pesan
+     benar-benar terkirim ke email, karena GitHub Pages tidak mendukung PHP.
+
+6. CATATAN
+   Website ini murni statis (HTML/CSS/JS) agar kompatibel dengan GitHub Pages,
+   sesuai ketentuan soal UAS yang mewajibkan deployment melalui GitHub Pages
+   tanpa layanan cloud berbayar.
