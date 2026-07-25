@@ -89,7 +89,58 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // =========================================================
-// 5. Form kontak (tanpa backend / PHP — GitHub Pages statis)
+// 5. Toggle tema terang/gelap (PEMBARUAN TAMPILAN)
+//    Pilihan tema disimpan di localStorage agar tetap
+//    tersimpan saat pengunjung membuka website lagi.
+// =========================================================
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const root = document.documentElement;
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    root.setAttribute('data-theme', 'light');
+    if (themeIcon) themeIcon.textContent = '🌙';
+  } else {
+    root.removeAttribute('data-theme');
+    if (themeIcon) themeIcon.textContent = '☀️';
+  }
+}
+
+const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+applyTheme(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    const nextTheme = isLight ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    localStorage.setItem('portfolio-theme', nextTheme);
+  });
+}
+
+// =========================================================
+// 6. Animasi scroll-reveal (PEMBARUAN TAMPILAN)
+//    Elemen dengan class "reveal" akan muncul perlahan
+//    (fade + geser naik) saat masuk ke area layar.
+// =========================================================
+const revealEls = document.querySelectorAll('.reveal');
+
+if (revealEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+}
+
+// =========================================================
+// 7. Form kontak (tanpa backend / PHP — GitHub Pages statis)
 //    Catatan: ganti action form ini dengan endpoint Formspree/Web3Forms
 //    jika ingin pesan benar-benar terkirim ke email Anda.
 // =========================================================

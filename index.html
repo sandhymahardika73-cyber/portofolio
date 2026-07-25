@@ -22,6 +22,9 @@
     <a href="#proyek" class="tab" data-tab="proyek">proyek<span class="tab__ext">.js</span></a>
     <a href="#kontak" class="tab" data-tab="kontak">kontak<span class="tab__ext">.txt</span></a>
   </nav>
+  <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema gelap/terang" title="Ganti tema">
+    <span id="themeIcon">☀️</span>
+  </button>
   <button class="tabbar__menu" id="menuToggle" aria-label="Buka menu">☰</button>
 </header>
 
@@ -54,7 +57,7 @@
   </section>
 
   <!-- ===== PROFIL ===== -->
-  <section id="profil" class="section">
+  <section id="profil" class="section reveal">
     <p class="eyebrow">01 · profil.md</p>
     <div class="profil__grid">
       <div class="profil__photo">
@@ -79,7 +82,7 @@
   </section>
 
   <!-- ===== INFORMASI UTAMA / PROYEK ===== -->
-  <section id="proyek" class="section">
+  <section id="proyek" class="section reveal">
     <p class="eyebrow">02 · proyek.js</p>
     <h2>Informasi Utama &amp; Proyek</h2>
     <p class="section__intro">Beberapa proyek dan pengalaman yang pernah saya kerjakan.</p>
@@ -118,7 +121,7 @@
   </section>
 
   <!-- ===== KONTAK ===== -->
-  <section id="kontak" class="section section--kontak">
+  <section id="kontak" class="section section--kontak reveal">
     <p class="eyebrow">03 · kontak.txt</p>
     <h2>Hubungi Saya</h2>
     <p class="section__intro">Terbuka untuk diskusi proyek, kolaborasi, atau sekadar menyapa.</p>
@@ -142,8 +145,8 @@
       </form>
 
       <ul class="kontak__list">
-        <li><span class="kontak__label">Email</span><a href="mailto:nama@email.com">sandhymahardika73@gmail.com</a></li>
-        <li><span class="kontak__label">GitHub</span><a href="https://github.com/username" target="_blank" rel="noopener">github.com/sandhymahardika73-cyber</a></li>
+        <li><span class="kontak__label">Email</span><a href="sandhymahardika73@gmail.com">sandhymahardika73@gmail.com</a></li>
+        <li><span class="kontak__label">GitHub</span><a href="https://github.com/sandhymahardika73-cyber" target="_blank" rel="noopener">github.com/sandhymahardika73-cyber</a></li>
         <li><span class="kontak__label">LinkedIn</span><a href="https://linkedin.com/in/username" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
         <li><span class="kontak__label">Lokasi</span><span>ubud, gianyar, Bali, Indonesia</span></li>
       </ul>
@@ -153,7 +156,7 @@
 </main>
 
 <footer class="footer">
-  <p>© <span id="year"></span> I Wayan Sandhy Mahardika. Dibangun dengan HTML, CSS &amp; JavaScript.</p>
+  <p>© <span id="year"></span> Nama Anda. Dibangun dengan HTML, CSS &amp; JavaScript.</p>
 </footer>
 
 <!-- ===== STATUS BAR (signature element ala VS Code) ===== -->
