@@ -379,6 +379,7 @@ a { color: inherit; text-decoration: none; }
 .kontak__list li {
   display: flex;
   justify-content: space-between;
+  gap: 4px 16px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
 }
@@ -439,6 +440,19 @@ a { color: inherit; text-decoration: none; }
   }
   .tabbar__tabs.is-open { display: flex; }
   .tabbar__menu { display: block; }
+
+  /* FIX: label & link kontak menempel di layar sempit karena
+     justify-content: space-between kehabisan ruang saat teks
+     link panjang (mis. URL GitHub). Ditumpuk agar selalu ada jarak. */
+  .kontak__list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .kontak__list a,
+  .kontak__list li > span:last-child {
+    word-break: break-all;
+  }
 }
 
 /* =========================================================
